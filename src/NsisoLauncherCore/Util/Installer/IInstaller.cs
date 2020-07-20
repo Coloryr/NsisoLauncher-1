@@ -1,11 +1,13 @@
-﻿namespace NsisoLauncherCore.Util.Installer
+﻿using System.Threading;
+using System.Threading.Tasks;
+using NsisoLauncherCore.Net;
+
+namespace NsisoLauncherCore.Util.Installer
 {
     public interface IInstaller
     {
-        string InstallerPath { get; set; }
+        void BeginInstall(ProgressCallback callback, CancellationToken cancellationToken);
 
-        IInstallOptions Options { get; set; }
-
-        void BeginInstall();
+        Task BeginInstallAsync(ProgressCallback callback, CancellationToken cancellationToken);
     }
 }

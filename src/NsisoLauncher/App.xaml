@@ -3,23 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:NsisoLauncher"
              Startup="Application_Startup"
-             Exit="Application_Exit"
-             DispatcherUnhandledException="Application_DispatcherUnhandledException"
-             StartupUri="Views/Windows/MainWindow.xaml" >
+             Exit="Application_Exit" ShutdownMode="OnMainWindowClose"
+             DispatcherUnhandledException="Application_DispatcherUnhandledException">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <!-- Accent and AppTheme setting -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
                 <!-- Fonts -->
-                <ResourceDictionary Source="pack://application:,,,/Resource/Style/Fonts.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Resource/Style/Fonts.xaml" />
                 <!-- Language -->
-                <ResourceDictionary Source="pack://application:,,,/Resource/Language/zh_CN.xaml"/>
-                
+                <ResourceDictionary Source="pack://application:,,,/Resource/Language/zh_CN.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
